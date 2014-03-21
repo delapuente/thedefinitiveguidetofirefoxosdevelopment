@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Firefox OS: the definitive slides</title>
+
+    <meta name="description" content="A comprehensive compilation of knowledge about Firefox OS">
+    <meta name="author" content="Salvador de la Puente González">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/firefoxos.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+        <section>
+          <header>
+            <h1>Firefox OS</h1>
+            <h2>The definitive slides</h2>
+          </header>
+        </section>
+
+        <section>
+          <section>
+            <h2>What is Firefox OS?</h2>
+          </section>
+
+          <section>
+            <img src="imgs/flagship.png" style="background-color: white;" />
+            <p>Firefox OS is a <strong>flagship</strong></p>
+          </section>
+
+          <section>
+            <p>Firefox OS is an open source mobile operating system.</p>
+            <p>Fully implemented with web technologies.</p>
+            <p class="fragment">For Firefox OS: <strong>Internet is the platform</strong>.</p>
+          </section>
+
+          <section>
+            <p>open source == linux &hearts; gecko </p>
+            <p class="fragment">gonk is <i>an Android <strong>fork</strong></i>.</p>
+          </section>
+
+          <section>
+            <p>web technologies == standard technologies</p>
+            <p class="fragment"><strong>code once</strong>, run everywhere!</p>
+          </section>
+
+          <section>
+            <p>Internet is the platform == ...</p>
+            <p class="fragment"><strong>smart</strong> Web applications +</p>
+            <p class="fragment">tons of applications <strong>already</strong> out there!</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>What is new in 1.1?</h2>
+          </section>
+
+          <section>
+            <p>MultiMedia Messages (MMS)</p>
+          </section>
+
+          <section>
+            <p>Push Notifications</p>
+          </section>
+
+          <section>
+            <p>Adaptative Application Search Engine</p>
+          </section>
+
+          <section>
+            <p>Better Contact Management</p>
+          </section>
+
+          <section>
+            <p>Improved Performance</p>
+          </section>
+
+          <section>
+            <p>Browser Downloads</p>
+          </section>
+
+          <section>
+            <p>Keyboard Autocorrection</p>
+          </section>
+
+          <section>
+            <p>E-mail Enhancements</p>
+          </section>
+
+          <section>
+            <p>Music Search</p>
+          </section>
+
+          <section>
+            <p>Better Calendar</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Architecture</h2>
+          </section>
+
+          <section>
+            <img src="imgs/platform.png" />
+            <p>Firefox OS == Gonk + Gecko + Gaia</p>
+          </section>
+
+          <section>
+            <h3>Gonk</h3>
+            <img src="imgs/gonk.png" style="width: 85%"/>
+            <p>Is an Android fork without a Dalvik machine. A <strong>fly-weight</strong> Linux distribution.</p>
+          </section>
+
+          <section>
+            <h3>Gecko</h3>
+            <img src="imgs/gecko.png" style="width: 85%"/>
+            <p>Is the Firefox' engine <strong>on steroids</strong> (lots of new APIs).</p>
+          </section>
+
+          <section>
+            <h3>Gaia</h3>
+            <img src="imgs/gaia.png" style="width: 85%"/>
+            <p>Is a set of Web Applications covering the <strong>core functionality</strong>: dialer, messaging, contacts, camera, gallery, homescreen, keyboard, system...</p>
+          </section>
+
+          <section>
+            <p>Yes! The <strong>system</strong> is a HTML5 applications too!</p>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Applications</h2>
+          </section>
+
+          <section>
+            <p>Firefox OS applications == web applications + ...</p>
+          </section>
+
+          <section>
+            <p>Web applications? But I already know...</p>
+            <div class="fragment">
+              <blockquote>HTML5</blockquote>
+              <blockquote>CSS3</blockquote>
+              <blockquote>JavaScript</blockquote>
+            </div>
+          </section>
+
+          <section>
+            <p>Congratulations! You already know<br/>how to develop <strong>Firefox OS apps</strong>!</p>
+          </section>
+
+          <section>
+            <p>+ <strong>manifest</strong></p>
+            <p>The file where you say your web site is indeed a<br><strong>web application</strong>.</p>
+          </section>
+
+          <section>
+            <p>+ access to hardware through <strong>special APIs</strong></p>
+            <p>APIs allowing <strong>access to the hardware</strong> such as the<br/>(mobile) radio, sensors, geolocalisation, SD cards...</p>
+          </section>
+
+          <section>
+            <p>+ some of them requiring <strong>special permissions</strong>.</p>
+            <p>To guarantee the user has <strong>total control</strong><br/>about what is he doing.</p>
+          </section>
+
+          <section>
+            <p>+ a collaborating schema based on <strong>web activities</strong>.</p>
+            <p>To allow inter-app <strong>communications</strong>.</p>
+          </section>
+
+          <section>
+            <p>+ answering to device events attending <strong>system messages</strong>.</p>
+            <p>Avoiding background services running and consuming resources. <strong>Attend on demand!</strong></p>
+          </section>
+
+          <section>
+            <p>All these features <strong>are being standarized</strong> in order to reach...</p>
+            <p class="fragment">Firefox OS applications <strong>===</strong> web applications</p>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>The manifest</h2>
+          </section>
+
+          <section>
+            <p>It's only a <code>JSON</code> file with <strong>three mandatory fields</strong>:</p>
+            <pre class="javascrtip"><code>{
+ "name": "Awesome App",
+ "description": "This application totally rocks!",
+ "launch_path": "/index.html"
+}</code></pre>
+            <p class="fragment">Call it <code>manifest.webapp</code> and add it to the root of your site.</p>
+          </section>
+
+          <section>
+            <p>But you need a <strong>128px size icon</strong> to upload to the market:</p>
+            <pre class="javascrtip"><code>{
+  "icons": {
+    "16": "/img/icon-16.png",
+    "48": "/img/icon-48.png",
+    "128": "/img/icon-128.png"
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <p>Of course, you can provide <strong>developer information</strong>:</p>
+            <pre class="javascrtip"><code>{
+ "developer": {
+   "name": "Salva",
+   "url": "http://unoyunodiez.com"
+ },
+ "version": "1.0.1"
+}</code></pre>
+          </section>
+
+          <section>
+            <p>And <strong>translations</strong>:</p>
+            <pre class="javascrtip"><code>{
+  "locales": {
+    "es": {
+      "description": "¡Esta aplicación es la caña de España!",
+      "developer": {
+        "url": "http://es.unoyunodiez.com/"
+    }
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <p>But, the real <strong>interesting</strong> fields are:</p>
+            <p>permissions, web activities &amp; system messages</p>
+          </section>
+
+          <section>
+            <p>Explore all the options in the<br/><a href="https://developer.mozilla.org/en-US/Apps/Developing/Manifest" target="_blank">Mozilla Development Network page for manifest</a>!</p>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Security</h2>
+          </section>
+
+          <section>
+            <p>Before talking about APIs, what about <strong>security</strong>?</p>
+            <p class="fragment">Security is about <strong>using certain APIs</strong>.</p>
+            <p class="fragment">Some applications can do more things than others.</p>
+          </section>
+
+          <section>
+            <h3>Types of applications</h3>
+            <p>Remember <strong>the Web is the platform</strong>?</p>
+          </section>
+
+          <section>
+            <blockquote>Hosted</blockquote>
+            <ul class="fragment">
+              <li>Internet origin</li>
+              <li>Can access remote resources</li>
+              <li>Local manifest</li>
+              <li>Security level: web</li>
+            </ul>
+            <blockquote>Packaged</blockquote>
+            <ul class="fragment">
+              <li>Installed on device</li>
+              <li>Only local resources</li>
+              <li>Remote resources via XHR</li>
+              <li>Security levels: several</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Levels of safety</h3>
+            <blockquote>Web</blockquote>
+            <ul class="fragment">
+              <li>Complete access to HTML5</li>
+              <li>And safe APIs</li>
+            </ul>
+            <blockquote>Privileged</blockquote>
+            <ul class="fragment">
+              <li>Tight CSP policy (no inline)</li>
+              <li>Access to privileged APIs</li>
+            </ul>
+            <blockquote>Certified</blockquote>
+            <ul class="fragment">
+              <li>Can only be preinstalled</li>
+              <li>Access to certified APIs</li>
+            </ul>
+          </section>
+
+          <section>
+            <p>Asking for <strong>permission</strong> is easy.<br/>Just add this to the manifest:</p>
+            <pre class="javascrtip"><code>{
+  "permissions": {
+    "contacts": {
+      "description": "Import contacts to AwesomeApp",
+      "access": "read"
+    }
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <p>But there is a lot of permissions:</p>
+            <pre class="javascrtip"><code>{
+  "permissions": {
+    "alarms": {},
+    "browser":{},
+    "power":{},
+    "fmradio":{},
+    "webapps-manage":{},
+    "mobileconnection":{},
+    "bluetooth":{},
+    "telephony":{},
+    "voicemail":{},
+    "device-storage:sdcard":{ "access": "readonly" },
+    "device-storage:pictures":{ "access": "readwrite" },
+    "device-storage:videos":{ "access": "readwrite" },
+    "device-storage:music":{ "access": "readcreate" },
+    "device-storage:apps":{ "access": "readonly" },
+    "settings":{ "access": "readwrite" },
+    "storage":{},
+    "camera":{},
+    "geolocation":{},
+    "wifi-manage":{},
+    "desktop-notification":{},
+    "idle":{},
+    "network-events":{},
+    "embed-apps":{},
+    "background-sensors":{},
+    "permissions":{},
+    "audio-channel-notification":{},
+    "audio-channel-content":{},
+    "cellbroadcast":{},
+    "keyboard":{}
+  }
+}</code></pre>
+            <p>Check <a href="https://developer.mozilla.org/en-US/Apps/Developing/App_permissions">all permissions at the MDN</a>.</p>
+          </section>
+
+          <section>
+            <p>And you must remember to provide the <strong><code>type</code></strong><br/>when using privileged APIs:</p>
+            <pre class="javascrtip"><code>{
+  "type": "privileged"
+}</code></pre>
+            <p>And respect the CSP policy: <strong>no inline</strong> scripts nor CSS!</p>
+          </section>
+
+          <section>
+            <p>Geek note: <strong>security model</strong></p>
+            <img src="imgs/securityframework.png" style="width: 85%;" />
+            <p>All applications are <strong>sandboxed</strong> and running in user space.</p>
+          </section>
+
+
+        </section>
+
+
+        <section>
+          <section>
+            <h2>WebAPIs</h2>
+          </section>
+
+          <section>
+            <p>Because is not only a laptop but a <strong>phone</strong>:</p>
+            <div class="fragment">
+              <blockquote>Telephony</blockquote>
+              <blockquote>(Multimedia) Message</blockquote>
+              <blockquote>Contacts</blockquote>
+              <blockquote>Battery</blockquote>
+              <blockquote>Vibration</blockquote>
+            </div>
+          </section>
+
+          <section>
+            <p>And not a simply phone but a <strong>smart</strong>phone:</p>
+            <div class="fragment">
+              <blockquote>WiFi connectivity</blockquote>
+              <blockquote>Browser</blockquote>
+              <blockquote>Camera</blockquote>
+              <blockquote>Device Storage</blockquote>
+              <blockquote>Alarms</blockquote>
+              <blockquote>Notifications</blockquote>
+              <blockquote>Keyboard</blockquote>
+              <blockquote>Settings</blockquote>
+            </div>
+          </section>
+
+          <section>
+            <p>And <strong>full of sensors</strong>:</p>
+            <div class="fragment">
+              <blockquote>Screen orientation</blockquote>
+              <blockquote>Ambient light</blockquote>
+              <blockquote>Proximity</blockquote>
+              <blockquote>Geolocation</blockquote>
+              <blockquote>NFC</blockquote>
+            </div>
+          </section>
+
+          <section>
+            <p>In order to use an API remember you need to<br/><strong>ask for permissions</strong> in the manifest.</p>
+          </section>
+
+          <section>
+            <img src="imgs/permissions.png" />
+            <p>Permissions are asked for in the <strong>very moment</strong> the application is going to use them. Not before.</p>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Hands on!</h2>
+          </section>
+
+          <section>
+            <h3>Battery</h3>
+            <p style="color: #88FF22; text-align: right;">Safe API</p>
+            <div class="fragment">
+                <p style="text-align: left; ">Get the object:</p>
+                <pre class="javascript"><code>var battery = navigator.mozBattery;</code></pre>
+            </div>
+            <div class="fragment">
+                <p style="text-align: left; ">Check the current level:</p>
+                <pre class="javascript"><code>var batteryLevel = battery.level * 100 + "%";</code></pre>
+            </div>
+            <div class="fragment">
+                <p style="text-align: left; ">Listen to events:</p>
+                <pre class="javascript"><code>battery.addEventLister("levelchange", setStatus, false);</code></pre>
+                <pre><code>battery.addEventLister("chargingchange", setStatus, false);</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h3>Vibration</h3>
+            <p style="color: #88FF22; text-align: right;">Safe API</p>
+            <div class="fragment">
+                <pre class="javascript"><code>navigator.vibrate(1000); //one second</code></pre>
+            </div>
+            <div class="fragment">
+                <pre class="javascript"><code>navigator.vibrate([1000, 200, 500]); //pattern</code></pre>
+            </div>
+            <div class="fragment">
+                <pre class="javascript"><code>navigator.vibrate(0); //stop the vibration</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h3>Ambient light</h3>
+            <p style="color: #88FF22; text-align: right;">Safe API</p>
+            <div class="fragment">
+                <pre class="javascript"><code>window.addEventListener("devicelight", function(event) {
+  // event.value contains the detected lux values
+  // consider 'dim' when below 50, 'bright' above 10000
+});</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h3>Device storage</h3>
+            <p style="color: #deff00; text-align: right;">Privileged API</p>
+            <div class="fragment">
+              <p style="text-align: left;">Available storages: music, pictures, videos, apps, sdcard:</p>
+              <pre class="javascript"><code>var sdcard = navigator.getDeviceStorage('sdcard');
+var request = sdcard.get("my-file.txt");
+
+request.onsuccess = function () {
+  var file = this.result;
+  console.log("Found the file: " + file.name);
+}
+
+request.onerror = function () {
+  console.warn("Unable to get the file: " + this.error);
+}</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <div>
+              <p style="text-align: left;">We can also check for space:</p>
+              <pre class="javascript"><code>var videos = navigator.getDeviceStorage('videos');
+var request = videos.usedSpace();
+request.onsuccess = function () {
+  var size = this.result / 1000000; // Bytes to Mb
+  console.log("Videos are using " + size.toFixed(2) + "MiB");
+}</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h3>Contacts</h3>
+            <p style="color: #deff00; text-align: right;">Privileged API</p>
+            <div class="fragment">
+                <p style="text-align: left; ">Get the object:</p>
+                <pre class="javascript"><code>var contactsAPI = navigator.mozContacts;</code></pre>
+            </div>
+            <div class="fragment">
+                <p style="text-align: left; ">Create a new contact:</p>
+                <pre class="javascript"><code>var contact = new mozContact();
+contact.givenName  = ["John"];
+contact.familyName = ["Doe"];
+contact.nickName   = ["No kidding"];</code></pre>
+            </div>
+            <div class="fragment">
+                <p style="text-align: left; ">Save the new contact:</p>
+                <pre class="javascript"><code>var request = contactAPI.save(contact);
+saving.onsuccess = function() {
+    console.log('New contact created');
+};
+saving.onerror = function(err) { console.error(err); };</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h3>Telephony</h3>
+            <p style="color: #ff4400; text-align: right;">Certified API</p>
+            <div class="fragment">
+                <p style="text-align: left; ">Get the object:</p>
+                <pre class="javascript"><code>var tel = navigator.Telephony;</code></pre>
+            </div>
+            <div class="fragment">
+                <p style="text-align: left; ">Place a call:</p>
+                <pre class="javascript"><code>var call = tel.dial(“123456789”);</code></pre>
+            </div>
+            <div class="fragment">
+                <p style="text-align: left; ">Listen to events:</p>
+                <pre class="javascript"><code>call.onstatechange = function (event) {
+  /* Check event.state: "dialing", "ringing", "busy",
+  "connecting", "connected", "disconnecting", "disconnected",
+  "incoming" */
+};
+call.onconnected = function () {};
+call.ondisconnected = function () {};</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h3>Messaging</h3>
+            <p style="color: #ff4400; text-align: right;">Certified API</p>
+            <div class="fragment">
+                <p style="text-align: left; ">Get the object:</p>
+                <pre class="javascript"><code>var messageManager = navigator.mozMobileMessage;</code></pre>
+            </div>
+            <div class="fragment">
+                <p style="text-align: left; ">Send a SMS or MMS:</p>
+                <pre class="javascript"><code>var sms = messageManager.sendSMS(number,messageContent);
+var mms = messageManager.sendMMS(mmsParameters);</code></pre>
+            </div>
+            <div class="fragment">
+                <p style="text-align: left; ">Listen to events:</p>
+                <pre class="javascript"><code>sms.onsucces = mms.onsuccess = function(evt) {
+  console.log('Thanks for paying');
+};
+sms.onerror = mms.onerror = function(evt) {
+  console.log('Problems ahead');
+};</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <p>But what if a privileged app requires some certified functionality?</p>
+            <p class="fragment">WebActivities are the answer...</p>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Web activities</h2>
+          </section>
+
+          <section>
+            <p>Allow an application to <strong>ask for actions or resources</strong>.</p>
+            <p class="fragment">They must be <strong>started by an user action</strong> (usually a tap).</p>
+          </section>
+
+          <section>
+            <p>It is like a dialog:</p>
+            <ol>
+              <li class="fragment">One application <strong>requires an activity</strong>.</li>
+              <li class="fragment">Other applications declare they can attend the activity.</li>
+              <li class="fragment">The user chooses one.</li>
+              <li class="fragment">Choosen application <strong>receives the activity</strong>.</li>
+              <li class="fragment">And can return a value.</li>
+            </ol>
+          </section>
+
+          <section>
+            <p>To declare an application can handle an activity.<br/>Add this to the manifest:</p>
+            <pre class="javascript"><code>{
+  "activities": {
+    "pick": {
+        "href": "./pick.html",
+        "disposition": "inline",
+        "filters": {
+            "type": ["image/*","image/jpeg","image/png"]
+        },
+        "returnValue": true
+    }
+  }
+}</code></pre>
+            <p>This is like saying: <strong><q>I can pick and return image things</q></strong></p>
+          </section>
+
+          <section>
+            <img src="imgs/activity.png" />
+            <p>More than one application can answer to the<br/> same <strong>'pick image'</strong> activity.</p>
+          </section>
+
+          <section>
+            <p>To start an activity use this JS code:</p>
+            <pre class="javascript"><code>button.addEventListener('click', function () {
+  var activity = new MozActivity({
+    name: "pick",
+    data: {
+      type: "image/jpeg"
+    }
+  });
+
+  activity.onsuccess = function() {
+    var picture = this.result;
+    console.log("A picture has been retrieved");
+  };
+
+  activity.onerror = function() {
+    console.log(this.error);
+  };
+});</code></pre>
+            <p>This is like saying: <strong><q>I want to pick a jpg</q></strong></p>
+          </section>
+
+          <section>
+            <p>To receive and handle the activity use this JS code:</p>
+            <pre class="javascript"><code>navigator.mozSetMessageHandler('activity', function(activityRequest) {
+    /* Recover the image */
+
+    // Send back the result
+    if (picture) {
+      activityRequest.postResult(picture);
+    } else {
+      activityRequest.postError("Unable to provide a picture");
+    }
+  }
+});</code></pre>
+            <p>This is like saying: <strong><q>If receiving an activity, recover and return an image.</q></strong></p>
+          </section>
+
+          <section>
+            <p>Attending activities is like attending system messages...</p>
+          </section>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>System messages</h2>
+          </section>
+
+          <section>
+            <p>Asynchronous events <strong>dispatched by the system</strong>.</p>
+            <p class="fragment">The system <strong>awakes the application</strong> and delivers the message.</p>
+          </section>
+
+          <section>
+            <p>Start by declaring what messages is the app waiting for.<br>Add this to the manifest:</p>
+            <pre class="javascript"><code>{
+  "messages": [
+    { "activity": "/index.html#handleActivity" },
+    { "alarm": "/index.html#attendAlarms" },
+    { "sms-received": "/index.html#readAndClassify" },
+    { "notification": "/index.html#attentNotification" },
+    { "wappush-received": "/index.html#pushReceived" }
+  ]
+}</code></pre>
+            <p>This is like saying: <strong><q>I'm waiting for these system messages and I want to handle in the specifie pages.</q></strong></p>
+          </section>
+
+          <section>
+            <img src="imgs/alarm.png" />
+            <p>Now you don't need to listen for the alarm.<br />The system <strong>awakes</strong> you!</p>
+          </section>
+
+
+          <section>
+            <p>But you need to handle the message. Add this to the JS:</p>
+            <pre class="javascript"><code>navigator.mozSetMessageHandler('alarm', function () {
+  /* Handle the activity */
+});</code></pre>
+            <pre class="javascript"><code>navigator.mozHasPendingMessage('alarm');</code></pre>
+          </section>
+
+        </section>
+
+        <section>
+          <h2>Credits</h2>
+          <ul>
+            <li><a href="http://slid.es/fercampo/ffox-apictivities/fullscreen#/">Firefox OS: Web APIs &amp; Web Activities</a> by Fernando Campo</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Architecture">Architecture</a> at Mozilla Development Network</li>
+            <li><a href="https://https://github.com/willyaranda/">What is new in 1.1?</a> by Guillermo López</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>About me</h2>
+          <img src="imgs/chibi.png" style="border:none; float:left; width: 250px; height:auto;"/>
+          <dl>
+            <dt>me</dt>
+            <dd>Salvador de la Puente González</dd>
+            <dt>twitter</dt>
+            <dd><a href="https://twitter.com/salvadelapuente">@salvadelapuente</a></dd>
+            <dt>My sites</dt>
+            <dd><a href="http://unoyunodiez.com">http://unoyunodiez.com</a><br/><a href="http://github.com/lodr">http://github.com/lodr</a></dd>
+          </dl>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
