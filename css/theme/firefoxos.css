@@ -1,6 +1,20 @@
 @font-face {
   font-family: 'FiraSans';
   font-style: normal;
+  font-weight: 300;
+  src: local('FiraSans LightRegular'), local('FiraSans-LightRegular'), url(./fonts/FiraSans-LightRegular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  font-style: italic;
+  font-weight: 300;
+  src: local('FiraSans LightRegularItalic'), local('FiraSans-LightRegularItalic'), url(./fonts/FiraSans-LightReguslarItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  font-style: normal;
   font-weight: 400;
   src: local('FiraSans Regular'), local('FiraSans-Regular'), url(./fonts/FiraSans-Regular.woff) format('woff');
 }
@@ -10,6 +24,20 @@
   font-style: italic;
   font-weight: 400;
   src: local('FiraSans RegularItalic'), local('FiraSans-RegularItalic'), url(./fonts/FiraSans-RegularItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('FiraSans Medium'), local('FiraSans Medium'), url(./fonts/FiraSans-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  font-style: italic;
+  font-weight: 500;
+  src: local('FiraSans MediumItalic'), local('FiraSans MediumItalic'), url(./fonts/FiraSans-MediumItalic.woff) format('woff');
 }
 
 @font-face {
@@ -76,7 +104,6 @@ body {
 
 .reveal h1 {
   color: #EEE;
-  text-transform: uppercase;
   text-shadow: 0.01em 0 0 #444,
                0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -123,10 +150,32 @@ strong {
   -o-transition: all .2s linear;
   transition: all .2s linear; }
 
+.reveal section img.small {
+  max-width: 200px;
+}
+
+.reveal section img.medium {
+  max-width: 400px;
+}
+
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
   border-color: #3b759e;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+.reveal .fox-animation {
+  background: url(./imgs/foxtail.png) 0 0 no-repeat;
+  width: 156px;
+  height: 156px;
+  animation: animate-tail 3.75s steps(44) infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes animate-tail {
+  0% {background-position: -6864px 0; }
+  100% {background-position: 0 0;}
+}
 
 /*********************************************
  * NAVIGATION CONTROLS

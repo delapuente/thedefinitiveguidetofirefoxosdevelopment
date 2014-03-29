@@ -28,6 +28,27 @@
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
+
+    <style>
+      .api-safe::after {
+        content: "✓";
+        font-size: 100px !important;
+        float: right;
+        color: #90EE90;
+      }
+      .api-privileged::after {
+        content: "⚠";
+        font-size: 100px !important;
+        float: right;
+        color: #FF7F50;
+      }
+      .api-certified::after {
+        content: "\20E0";
+        font-size: 100px !important;
+        float: right;
+        color: #DC143C;
+      }
+    </style>
   </head>
 
   <body>
@@ -37,6 +58,7 @@
       <div class="slides">
         <section>
           <header>
+            <div style="float:left;" class="fox-animation"></div>
             <h1>Firefox OS</h1>
             <h2>The definitive slides</h2>
           </header>
@@ -48,14 +70,26 @@
           </section>
 
           <section>
+            <img src="imgs/devices.jpg" style="background-color: white;" />
+            <p>Firefox OS is a <strong>mobile operating system</strong></p>
+          </section>
+
+          <section>
             <img src="imgs/flagship.png" style="background-color: white;" />
             <p>Firefox OS is a <strong>flagship</strong></p>
           </section>
 
           <section>
-            <p>Firefox OS is an open source mobile operating system.</p>
+            <img class="medium" src="imgs/octocat.png" />
+            <p>Firefox OS is an <strong>open source</strong> mobile operating system.</p>
+            <p><a href="https://github.com/mozilla-b2g">
+            https://github.com/mozilla-b2g</a></p>
+          </section>
+
+          <section>
+            <img class="medium" src="imgs/html5-logo-3d.png" />
             <p>Fully implemented with web technologies.</p>
-            <p class="fragment">For Firefox OS: <strong>Internet is the platform</strong>.</p>
+            <p>Internet is the <strong>platform</strong>.</p>
           </section>
 
           <section>
@@ -77,47 +111,51 @@
 
         <section>
           <section>
-            <h2>What is new in 1.1?</h2>
+            <h2>What is new in<br/>1.2 & 1.3?</h2>
           </section>
 
           <section>
-            <p>MultiMedia Messages (MMS)</p>
+            <p>Conference calls</p>
           </section>
 
           <section>
-            <p>Push Notifications</p>
+            <p>Notifications for new e-mails</p>
           </section>
 
           <section>
-            <p>Adaptative Application Search Engine</p>
+            <p>Audio and video attachments for e-mail</p>
           </section>
 
           <section>
-            <p>Better Contact Management</p>
+            <p>New lock-screen</p>
+          </section>
+
+          <section>
+            <p>Improved push notifications</p>
+          </section>
+
+          <section>
+            <p>"Do not track" setting</p>
+          </section>
+
+          <section>
+            <p>Music player controls in the utility tray and lock-screen</p>
+          </section>
+
+          <section>
+            <p>Near Field Communications</p>
+          </section>
+
+          <section>
+            <p>DSDS support</p>
+          </section>
+
+          <section>
+            <p>Visual refresh</p>
           </section>
 
           <section>
             <p>Improved Performance</p>
-          </section>
-
-          <section>
-            <p>Browser Downloads</p>
-          </section>
-
-          <section>
-            <p>Keyboard Autocorrection</p>
-          </section>
-
-          <section>
-            <p>E-mail Enhancements</p>
-          </section>
-
-          <section>
-            <p>Music Search</p>
-          </section>
-
-          <section>
-            <p>Better Calendar</p>
           </section>
         </section>
 
@@ -127,8 +165,11 @@
           </section>
 
           <section>
-            <img src="imgs/platform.png" />
             <p>Firefox OS == Gonk + Gecko + Gaia</p>
+            <img src="imgs/platform.png" />
+            <p class="fragment">Details about Firefox OS Architecture at
+            the <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Architecture">
+            <br/>Mozilla Developer Network</a>
           </section>
 
           <section>
@@ -166,14 +207,11 @@
 
           <section>
             <p>Web applications? But I already know...</p>
-            <div class="fragment">
-              <blockquote>HTML5</blockquote>
-              <blockquote>CSS3</blockquote>
-              <blockquote>JavaScript</blockquote>
-            </div>
+            <img src="imgs/web-techs.png" />
           </section>
 
           <section>
+            <img src="imgs/success.jpg" />
             <p>Congratulations! You already know<br/>how to develop <strong>Firefox OS apps</strong>!</p>
           </section>
 
@@ -184,12 +222,15 @@
 
           <section>
             <p>+ access to hardware through <strong>special APIs</strong></p>
-            <p>APIs allowing <strong>access to the hardware</strong> such as the<br/>(mobile) radio, sensors, geolocalisation, SD cards...</p>
+            <p>APIs allowing <strong>access to the hardware</strong> such as
+            the<br/>(mobile) radio, sensors, geolocation, devices
+            storage...</p>
           </section>
 
           <section>
             <p>+ some of them requiring <strong>special permissions</strong>.</p>
-            <p>To guarantee the user has <strong>total control</strong><br/>about what is he doing.</p>
+            <p>To guarantee the user has <strong>total control</strong><br/>about
+            what they are doing.</p>
           </section>
 
           <section>
@@ -204,6 +245,7 @@
 
           <section>
             <p>All these features <strong>are being standarized</strong> in order to reach...</p>
+            <img src="imgs/standards.png" />
             <p class="fragment">Firefox OS applications <strong>===</strong> web applications</p>
           </section>
 
@@ -283,43 +325,77 @@
 
           <section>
             <h3>Types of applications</h3>
-            <p>Remember <strong>the Web is the platform</strong>?</p>
+            <p>Remember: <strong>the Web is the platform</strong></p>
           </section>
 
           <section>
-            <blockquote>Hosted</blockquote>
-            <ul class="fragment">
-              <li>Internet origin</li>
-              <li>Can access remote resources</li>
-              <li>Local manifest</li>
-              <li>Security level: web</li>
-            </ul>
-            <blockquote>Packaged</blockquote>
-            <ul class="fragment">
-              <li>Installed on device</li>
-              <li>Only local resources</li>
-              <li>Remote resources via XHR</li>
-              <li>Security levels: several</li>
+            <h3>Hosted</h3>
+            <ul>
+              <li class="fragment">Internet origin</li>
+              <li class="fragment">Can access remote resources</li>
+              <li class="fragment">Local manifest</li>
+              <li class="fragment">Security level: <strong>web</strong></li>
             </ul>
           </section>
 
           <section>
-            <h3>Levels of safety</h3>
-            <blockquote>Web</blockquote>
-            <ul class="fragment">
-              <li>Complete access to HTML5</li>
-              <li>And safe APIs</li>
+            <h3>Packaged</h3>
+            <ul>
+              <li class="fragment">Installed on device</li>
+              <li class="fragment">Only local resources</li>
+              <li class="fragment">Remote resources via XHR</li>
+              <li class="fragment">Security levels: <strong>several</strong></li>
             </ul>
-            <blockquote>Privileged</blockquote>
-            <ul class="fragment">
-              <li>Tight CSP policy (no inline)</li>
-              <li>Access to privileged APIs</li>
-            </ul>
-            <blockquote>Certified</blockquote>
-            <ul class="fragment">
-              <li>Can only be preinstalled</li>
-              <li>Access to certified APIs</li>
-            </ul>
+          </section>
+
+          <section>
+            <h3>Levels of trust</h3>
+          </section>
+
+          <section>
+            <h3>Web</h3>
+            <p class="fragment">Complete access to HTML5 and safe APIs</p>
+            <p class="fragment">Can request <strong>explicit</strong> access
+            to some APIs:<br/>geolocation, getUserMedia, fullscreen,
+            notifications, etc.</p>
+            <p class="fragment">Permissions are <strong>not remembered
+            </strong> by default.
+            </p>
+          </section>
+
+          <section>
+            <h3>Installed</h3>
+            <p class="fragment">Complete access to HTML5 and safe APIs</p>
+            <p class="fragment">Can request <strong>implicit</strong> access
+            to some APIs:<br/>alarms, FM Radio, fullscreen, etc.</p>
+            <p class="fragment">Higher storage quotas.</p>
+          </section>
+
+          <section>
+            <h3>Privileged</h3>
+            <p class="fragment">Equivalent in functionality to native apps
+            on other platforms.</p>
+            <p class="fragment">Content Security Policy (<strong>CSP</strong>):
+            no inline.</p>
+            <p class="fragment">Reviewed and signed by <strong>trusted app
+            store</strong>.
+            </p>
+            <p class="fragment">Direct access to a lot of <strong>high
+            risk</strong> APIs:<br/>browser, mobile network, systemXHR,
+            TCP sockets, WebContacts...</p>
+          </section>
+
+          <section>
+            <h3>Certified</h3>
+            <p class="fragment">Intended for system-critical applications:
+            <strong>Gaia core apps</strong>.</p>
+            <p class="fragment">Even more extrict <strong>CSP</strong></p>
+            <p class="fragment"><strong>Never prompt</strong> for access<br/>
+            (except getUserMedia and geolocation).
+            </p>
+            <p class="fragment">Direct access to <strong>critical risk</strong>
+            APIs:<br/>WebSMS, WebTelephony, WebBluetooth,<br/>
+            MobileConnection, PowerManagement, etc.</p>
           </section>
 
           <section>
@@ -381,54 +457,90 @@
           </section>
 
           <section>
-            <p>Geek note: <strong>security model</strong></p>
-            <img src="imgs/securityframework.png" style="width: 85%;" />
-            <p>All applications are <strong>sandboxed</strong> and running in user space.</p>
+            <h3>Protecting apps from other apps</h3>
           </section>
 
+          <section>
+            <img src="imgs/sandbox.png" style="width: 85%;" />
+            <p>All applications are <strong>sandboxed</strong> and running in user space.</p>
+            <p>Each application has an <strong>origin</strong> and all the data is separated by origin.</p>
+          </section>
+
+          <section>
+            <h3>&lt;iframe mozapp&gt;</h3>
+            <p class="fragment">Apps run inside mozApp iframes</p>
+            <p class="fragment">Only the <strong>system application</strong>
+            can add<br/>this type of iframes to the DOM</p>
+            <p class="fragment">One app can request another app to open but<br/>
+            not to launch it directly.</p>
+          </section>
+
+          <section>
+            <h3>&lt;iframe mozbrowser&gt;</h3>
+            <p class="fragment">An iframe to act as a browser.</p>
+            <p class="fragment">In children iframes, the parent is not
+            accessible.</p>
+            <p class="fragment">The parent, aka "the browser", is granted
+            some<br/><strong>security privileges</strong>.</p>
+          </section>
 
         </section>
 
 
         <section>
           <section>
-            <h2>WebAPIs</h2>
+            <h2>Web APIs</h2>
           </section>
 
           <section>
-            <p>Because is not only a laptop but a <strong>phone</strong>:</p>
-            <div class="fragment">
-              <blockquote>Telephony</blockquote>
-              <blockquote>(Multimedia) Message</blockquote>
-              <blockquote>Contacts</blockquote>
-              <blockquote>Battery</blockquote>
-              <blockquote>Vibration</blockquote>
-            </div>
+            <h3>Safe APIs</h3>
+            <ul class="fragment">
+              <li>Network information</li>
+              <li>Ambient light</li>
+              <li>Geolocation</li>
+              <li>Pointer lock</li>
+              <li>Proximity</li>
+              <li>Device orientation</li>
+              <li>Indexed DB</li>
+              <li>Vibration</li>
+              <li>Alarm</li>
+              <li>Simple PUSH</li>
+              <li>Web Notifications</li>
+            </ul>
           </section>
 
           <section>
-            <p>And not a simply phone but a <strong>smart</strong>phone:</p>
-            <div class="fragment">
-              <blockquote>WiFi connectivity</blockquote>
-              <blockquote>Browser</blockquote>
-              <blockquote>Camera</blockquote>
-              <blockquote>Device Storage</blockquote>
-              <blockquote>Alarms</blockquote>
-              <blockquote>Notifications</blockquote>
-              <blockquote>Keyboard</blockquote>
-              <blockquote>Settings</blockquote>
-            </div>
+            <p>...and all standard <strong>HTML5</strong> APIs...</p>
+            <img src="imgs/html5-apis.png" />
           </section>
 
           <section>
-            <p>And <strong>full of sensors</strong>:</p>
-            <div class="fragment">
-              <blockquote>Screen orientation</blockquote>
-              <blockquote>Ambient light</blockquote>
-              <blockquote>Proximity</blockquote>
-              <blockquote>Geolocation</blockquote>
-              <blockquote>NFC</blockquote>
-            </div>
+            <h3>Privileged APIs</h3>
+            <ul class="fragment">
+              <li>TCP Socket</li>
+              <li>WebFM</li>
+              <li>Contacts</li>
+              <li>Device Storage</li>
+              <li>Browser</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Certified APIs</h3>
+            <ul class="fragment">
+              <li>Bluetooth</li>
+              <li>Mobile Connection</li>
+              <li>Network Stats</li>
+              <li>Telephony</li>
+              <li>WebSMS</li>
+              <li>WiFi information</li>
+              <li>Camera</li>
+              <li>Power Management</li>
+              <li>Settings</li>
+              <li>Idle</li>
+              <li>Permissions</li>
+              <li>Time / clock</li>
+            </ul>
           </section>
 
           <section>
@@ -448,8 +560,7 @@
           </section>
 
           <section>
-            <h3>Battery</h3>
-            <p style="color: #88FF22; text-align: right;">Safe API</p>
+            <h3 class="api-safe">Battery</h3>
             <div class="fragment">
                 <p style="text-align: left; ">Get the object:</p>
                 <pre class="javascript"><code>var battery = navigator.mozBattery;</code></pre>
@@ -466,8 +577,7 @@
           </section>
 
           <section>
-            <h3>Vibration</h3>
-            <p style="color: #88FF22; text-align: right;">Safe API</p>
+            <h3 class="api-safe">Vibration</h3>
             <div class="fragment">
                 <pre class="javascript"><code>navigator.vibrate(1000); //one second</code></pre>
             </div>
@@ -480,8 +590,7 @@
           </section>
 
           <section>
-            <h3>Ambient light</h3>
-            <p style="color: #88FF22; text-align: right;">Safe API</p>
+            <h3 class="api-safe">Ambient light</h3>
             <div class="fragment">
                 <pre class="javascript"><code>window.addEventListener("devicelight", function(event) {
   // event.value contains the detected lux values
@@ -491,8 +600,7 @@
           </section>
 
           <section>
-            <h3>Device storage</h3>
-            <p style="color: #deff00; text-align: right;">Privileged API</p>
+            <h3 class="api-privileged">Device storage</h3>
             <div class="fragment">
               <p style="text-align: left;">Available storages: music, pictures, videos, apps, sdcard:</p>
               <pre class="javascript"><code>var sdcard = navigator.getDeviceStorage('sdcard');
@@ -522,8 +630,7 @@ request.onsuccess = function () {
           </section>
 
           <section>
-            <h3>Contacts</h3>
-            <p style="color: #deff00; text-align: right;">Privileged API</p>
+            <h3 class="api-privileged">Contacts</h3>
             <div class="fragment">
                 <p style="text-align: left; ">Get the object:</p>
                 <pre class="javascript"><code>var contactsAPI = navigator.mozContacts;</code></pre>
@@ -546,8 +653,7 @@ saving.onerror = function(err) { console.error(err); };</code></pre>
           </section>
 
           <section>
-            <h3>Telephony</h3>
-            <p style="color: #ff4400; text-align: right;">Certified API</p>
+            <h3 class="api-certified">Telephony</h3>
             <div class="fragment">
                 <p style="text-align: left; ">Get the object:</p>
                 <pre class="javascript"><code>var tel = navigator.Telephony;</code></pre>
@@ -569,8 +675,7 @@ call.ondisconnected = function () {};</code></pre>
           </section>
 
           <section>
-            <h3>Messaging</h3>
-            <p style="color: #ff4400; text-align: right;">Certified API</p>
+            <h3 class="api-certified">Messaging</h3>
             <div class="fragment">
                 <p style="text-align: left; ">Get the object:</p>
                 <pre class="javascript"><code>var messageManager = navigator.mozMobileMessage;</code></pre>
@@ -593,7 +698,10 @@ sms.onerror = mms.onerror = function(evt) {
 
           <section>
             <p>But what if a privileged app requires some certified functionality?</p>
-            <p class="fragment">WebActivities are the answer...</p>
+          </section>
+
+          <section>
+            <p>WebActivities are the answer...</p>
           </section>
 
         </section>
@@ -731,6 +839,7 @@ sms.onerror = mms.onerror = function(evt) {
             <li><a href="http://slid.es/fercampo/ffox-apictivities/fullscreen#/">Firefox OS: Web APIs &amp; Web Activities</a> by Fernando Campo</li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Architecture">Architecture</a> at Mozilla Development Network</li>
             <li><a href="https://https://github.com/willyaranda/">What is new in 1.1?</a> by Guillermo López</li>
+            <li><a href="https://github.com/ferjm/firefoxos-bootcamp">Firefox OS Bootcamp</a> by Fernando Jiménez</li>
           </ul>
         </section>
 
