@@ -774,7 +774,11 @@ sms.onerror = mms.onerror = function(evt) {
           <section>
             <p>To receive and handle the activity use this JS code:</p>
             <pre class="javascript"><code>navigator.mozSetMessageHandler('activity', function(activityRequest) {
-    /* Recover the image */
+  var option = activityRequest.source;
+
+  if (option.name === "pick") {
+    // Do something to handle the activity
+    var file = storage.get(option.data.filename);
 
     // Send back the result
     if (picture) {
